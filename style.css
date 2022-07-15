@@ -1,4 +1,120 @@
+#load {
+    background-image: url(images/loading.gif);
+    background-color: #939090;
+    z-index: 9999;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 40px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
 body
 {
-	width: 100%;
+    overflow-x: hidden;
+}
+
+#title {
+    font-size: 6em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+[style*="--aspect-ratio"] {
+    width:
+    100%;
+}
+[style*="--aspect-ratio"]::before {
+    content:
+    "";
+    height:
+    0;
+    float:
+    left;
+    padding-bottom:
+    calc( 100% / (var(--aspect-ratio)) );
+}
+[style*="--aspect-ratio"]::after {
+    content:
+    "";
+    display:
+    block;
+    clear:
+    both;
+}
+
+.buttonNavegation{
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+
+
+.navegationButtonConteiner
+{
+    position: absolute;
+    right: 7%;
+    bottom: 7%;
+    width: 10%;
+    min-width: 65px;
+    z-index: 10;
+}
+
+.nextButton
+{
+    background-image: url(images/next.png);    
+}
+.backButton
+{
+    background-image: url(images/back.png);    
+}
+#carrossel
+{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.pagesCarrossel {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+#pageC1
+{
+    background-color:  #134123;   
+}
+#pageC2
+{
+    background-color:  #abaf4a;   
+}
+#pageC3
+{
+    background-color:  #f1f1f1;   
+}
+#carrossel #backButton
+{
+    background-image: url('images/carrossel/back.png');
+    left: 10%;
+}
+#carrossel #nextButton
+{
+    background-image: url('images/carrossel/next.png');
+    right: 10%;
+}
+.buttonNavegationCarrossel {
+    position: absolute;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    height: 9%;
+    margin: 10px;
+    top: 30px;
+    width: 10%;
+    min-width: 30px;
+    --aspect-ratio: 1/1;
+    z-index: 2;
 }
